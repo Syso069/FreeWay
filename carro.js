@@ -1,38 +1,27 @@
-let xCarro = 810;
-let yCarro = 40;
-let velocidadeCarro1 = 3;
-
-let xCarro2 = 810;
-let yCarro2 = 96;
-let velocidadeCarro2 = 4;
-
-let xCarro3 = 810;
-let yCarro3 = 150;
-let velocidadeCarro3 = 3.5;
+let xCarros = [810, 810, 810];
+let yCarros = [40, 96, 150];
+let velocidadeCarros = [3, 4, 3.5];
 
 function mostraCarro (){
-    image(imagemCarro, xCarro, yCarro, 50, 40);
-    image(imagemCarro2, xCarro2, yCarro2, 50, 40);
-    image(imagemCarro3, xCarro3, yCarro3, 50, 40);
+    for ( let i = 0; i < imagemCarros.length; i = i + 1){
+        image(imagemCarros[i], xCarros[i], yCarros[i], 50, 40);
+    }
 }
 
-
-function movimentaCarro(){
-    xCarro -= velocidadeCarro1;
-    xCarro2 -= velocidadeCarro2;
-    xCarro3 -= velocidadeCarro3;
-  }
-
-function voltaPosicaoCarro(){
-    if(xCarro < -50){
-        xCarro = 810;
+function movimentaCarro (){
+    for (let i = 0; i < imagemCarros.length; i = i + 1 ){
+        xCarros[i] -= velocidadeCarros[i];
     }
+}
 
-    if(xCarro2 < -50){
-        xCarro2 = 810;
+function voltaPosicaoCarro (){
+    for (let i = 0; i < imagemCarros.length; i = i + 1){
+        if(passaTela(xCarros[i])){
+            xCarros[i] = 810;
+        }
     }
+}
 
-    if(xCarro3 < -50){
-        xCarro3 = 810;
-    }
+function passaTela (xCarro){
+    return xCarro < -50;
 }
