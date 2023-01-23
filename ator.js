@@ -1,5 +1,5 @@
-let yAtor = 367;
 let xAtor = 100;
+let yAtor = 367;
 let colisao = false;
 let meusPontos = 0;
 
@@ -13,15 +13,17 @@ function movimentaAtor(){
    }
     
    if(keyIsDown(83)){
-      yAtor +=2;
+      if(podeSeMover()){
+         yAtor +=2;
+      }
    }
   
    if(keyIsDown(65)){
-      xAtor -=1;
+         xAtor -=1;
    }
   
    if(keyIsDown(68)){
-      xAtor +=1;
+         xAtor +=1;
    }
   
 }
@@ -31,6 +33,10 @@ function verificaColisao(){
       colisao = collideRectCircle(xCarros[i], yCarros[i], comprimentoCarro, alturaCarro, xAtor, yAtor, 15)
       if (colisao){
          voltaPosicaoInicial();
+         if(pontosMaiorZero()){
+            meusPontos -= 1;
+         }
+         somColisao.play();
       }
    }
 }
@@ -50,5 +56,14 @@ function marcaPontos(){
    if(yAtor < 15){
       meusPontos += 1;
       voltaPosicaoInicial();
+      somPonto.play();
    }
+}
+
+function pontosMaiorZero(){
+   return meusPontos > 0;
+}
+
+function podeSeMover (){   
+   return yAtor < 367;
 }
