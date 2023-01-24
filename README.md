@@ -12,7 +12,7 @@
 
 # Teclas para jogar
 
-> "W" para cima, "S" para baixo, "D" para a direita, "A" para a esquerda.
+> "W" mover para cima, "S" mover para baixo, "D" mover para a direita, "A" mover para a esquerda.
 
 # Status do projeto
 
