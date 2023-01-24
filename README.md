@@ -20,7 +20,7 @@
 
 ## Layout Desktop
 <div style="display: inline_block"><br>
-<img height="600" alt="Imagem desktop mario" src="https://user-images.githubusercontent.com/94554205/214435811-1341f68e-80d1-4af3-92d5-7c4e70989749.png">
+<img height="600" alt="Imagem desktop jogo freeway" src="https://user-images.githubusercontent.com/94554205/214439388-51c378f4-4417-428d-bf29-6f97a360edf8.png">
 </div>
 
 # Tecnologias utilizadas
