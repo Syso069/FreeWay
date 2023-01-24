@@ -10,6 +10,10 @@
 
 > A aplicação consiste em um jogo sobre onde temos temos uma vaquinha que tem como o objetivo atravessar a rua cujo passar carro em diversas velocidades.
 
+# Teclas para jogar
+
+> "W" para cima, "S" para baixo, "D" para a direita, "A" para a esquerda.
+
 # Status do projeto
 
 > Concluído ✔️
